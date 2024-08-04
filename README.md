@@ -13,6 +13,10 @@ This repository, maintained by [fairy-root](https://github.com/fairy-root), prov
 - **Load Ollama LLms** (`ollamas.py`): Interact with Ollama's language models, including streaming and logging capabilities.
 - **Concatenate Text LLms** (`concatenate.py`): Concatenate instructional text with prompts, offering customizable text formatting.
 
+## Workflow
+
+- Visit this Link to get the workflow [openart ai](https://openart.ai/workflows/toad_jaunty_59/comfyui-ollama-node-for-prompt-creation/u5P5TiFlFfKbsx2TCcK5)
+
 ## Installation
 
 ### Requirements
