@@ -4,6 +4,10 @@ This repository, maintained by [fairy-root](https://github.com/fairy-root), prov
 
 ![Ollama](https://i.imgur.com/JRlQQXr.png "Displaying help")
 
+![Ollama](https://i.imgur.com/2BbdNwq.png "Ollama")
+
+![Ollama](https://i.imgur.com/m3VLQ8H.png "Displaying help")
+
 ## Features
 
 - **Load Ollama LLms** (`ollamas.py`): Interact with Ollama's language models, including streaming and logging capabilities.
@@ -64,8 +68,6 @@ This repository, maintained by [fairy-root](https://github.com/fairy-root), prov
 3. **Expected Output:** The response from the `phi3` model based on the provided prompt.
 
 #### ConcatenateText Node
-
-![Ollama](https://i.imgur.com/2BbdNwq.png "Ollama")
 
 1. **Node Inputs:**
    - **Instruction:** "Act as a creative problem solver that answers in prompts..."
