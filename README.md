@@ -51,6 +51,7 @@ This repository, maintained by [fairy-root](https://github.com/fairy-root), prov
    ```bash
    ollama run phi3
    ```
+**Phi is just an example since it is small and fast. You can choose any other models as well.**
 
 ### Example: Using the `phi3` Model
 
@@ -59,7 +60,7 @@ This repository, maintained by [fairy-root](https://github.com/fairy-root), prov
 1. **Node Inputs:**
    - **Prompt:** Your text prompt.
    - **ollama_model:** Select the `phi3` model from the available options.
-   - **Console_log:** Set to `True` to enable real-time logging.
+   - **Console_log:** Set to `True` to enable real-time logging of the prompt inside the console.
 
 2. **Sample Usage:**
 
@@ -89,7 +90,7 @@ This repository, maintained by [fairy-root](https://github.com/fairy-root), prov
 
 ## Node Details
 
-### OllamaService (`ollama.py`)
+### Load Ollama LLMs Model Node
 
 - **Inputs:** 
   - `prompt`: Text prompt (STRING)

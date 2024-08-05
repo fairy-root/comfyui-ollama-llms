@@ -11,7 +11,7 @@ class ConcatenateText:
 
     RETURN_TYPES = ("STRING",)
     FUNCTION = "concatenate"
-    CATEGORY = "text"
+    CATEGORY = "Ollama"
 
     def concatenate(self, instruction, prompt, separator):
         concatenated_text = instruction + separator + prompt

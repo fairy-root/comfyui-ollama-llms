@@ -35,7 +35,7 @@ class OllamaService:
 
     RETURN_TYPES = ("STRING",)
     FUNCTION = "execute"
-    CATEGORY = "advanced/loaders"
+    CATEGORY = "Ollama"
 
     def execute(self, prompt, ollama_model=None, stream=True, Console_log=False):
         return self._ollama_interaction(ollama_model, prompt, stream, Console_log)
