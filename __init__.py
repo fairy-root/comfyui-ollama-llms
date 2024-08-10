@@ -1,15 +1,17 @@
 from .ollamas import OllamaService
 from .concatenate import ConcatenateText
+from .llava import LlavaVision
 
 NODE_CLASS_MAPPINGS = {
     "ollama": OllamaService,
     "ConcatenateText": ConcatenateText,
-
+    "llava": LlavaVision
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
     "ollama": "Load Ollama LLMs",
-    "ConcatenateText": "Concatenate Text LLMs",
+    "ConcatenateText": "Concatenate Text Prompts LLMs",
+    "llava": "Load Llava Vision LLMs"
 }
 
-__all__ = ["ollama", "ConcatenateText", "NODE_CLASS_MAPPINGS", "NODE_DISPLAY_NAME_MAPPINGS"]
+__all__ = ["NODE_CLASS_MAPPINGS", "NODE_DISPLAY_NAME_MAPPINGS"]

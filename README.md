@@ -2,18 +2,19 @@
 
 This repository, maintained by [fairy-root](https://github.com/fairy-root), provides custom nodes for [ComfyUI](https://github.com/comfyanonymous/ComfyUI), integrating with the Ollama API for language model interactions and offering text manipulation capabilities.
 
-![Ollama](https://i.imgur.com/JRlQQXr.png "Displaying help")
+![Ollama](https://i.imgur.com/60snV9O.png "Displaying help")
 
-![Ollama](https://i.imgur.com/2BbdNwq.png "Ollama")
-
-![Ollama](https://i.imgur.com/m3VLQ8H.png "Displaying help")
+## Installation Guide
 
 ## Features
 
-- **Load Ollama LLms** (`ollamas.py`): Interact with Ollama's language models, including streaming and logging capabilities.
-- **Concatenate Text LLms** (`concatenate.py`): Concatenate instructional text with prompts, offering customizable text formatting.
+- **Load Ollama LLMs**: Interact with Ollama's language models, including streaming and logging capabilities.
+- **Concatenate Text LLMs**: Concatenate instructional text with prompts, offering customizable text formatting.
+- **Load Llava Vision LLMs**: Loads Llava model and interacts with loaded images based on the user prompts.
 
 ## Workflow
+
+![Ollama](https://i.imgur.com/JRlQQXr.png "Displaying help")
 
 - Visit this Link to get the workflow [openart ai](https://openart.ai/workflows/toad_jaunty_59/comfyui-ollama-node-for-prompt-creation/u5P5TiFlFfKbsx2TCcK5)
 
@@ -43,6 +44,8 @@ This repository, maintained by [fairy-root](https://github.com/fairy-root), prov
 
 ### Obtaining Ollama Model
 
+**Phi3 is just an example since it is small and fast. You can choose any other models as well.**
+
 - To use the **Load Ollama LLms** node, you'll need to install **Ollama**. Visit [Ollama](https://ollama.com) and install the Ollama App for your OS, then in the terminal use the command:
    ```bash
    ollama pull phi3
@@ -51,68 +54,6 @@ This repository, maintained by [fairy-root](https://github.com/fairy-root), prov
    ```bash
    ollama run phi3
    ```
-**Phi is just an example since it is small and fast. You can choose any other models as well.**
-
-### Example: Using the `phi3` Model
-
-#### OllamaService Node
-
-1. **Node Inputs:**
-   - **Prompt:** Your text prompt.
-   - **ollama_model:** Select the `phi3` model from the available options.
-   - **Console_log:** Set to `True` to enable real-time logging of the prompt inside the console.
-
-2. **Sample Usage:**
-
-   In ComfyUI, configure the OllamaService node with the following inputs:
-
-   - **Prompt:** "What is the meaning of life?"
-   - **ollama_model:** `phi3`
-   - **Console_log:** `True`
-
-3. **Expected Output:** The response from the `phi3` model based on the provided prompt.
-
-#### ConcatenateText Node
-
-1. **Node Inputs:**
-   - **Instruction:** "Act as a creative problem solver that answers in prompts..."
-   - **Prompt:** "beautiful woman. close-up, depth of field, ray tracing"
-   - **Separator:** "PROMPT="
-
-2. **Sample Usage:**
-
-   In ComfyUI, configure the ConcatenateText node with the above inputs. The output will be a concatenated string with the instruction and prompt.
-
-3. **Expected Output:** A single string combining the instruction and prompt with the separator.
-
-4. **ConcatenateText and Loader**
-   You can use the concatenate text node to concatenate the instruction and your prompt, then pass it to the loader node for processing by **converting the Prompt in the loader into an input**. then linking the two nodes together, you can generate a response based on your concatenated text.
-
-## Node Details
-
-### Load Ollama LLMs Model Node
-
-- **Inputs:** 
-  - `prompt`: Text prompt (STRING)
-  - `ollama_model`: Selected model from Ollama (LIST)
-  - `Console_log`: Enable/disable console logging (BOOLEAN)
-
-- **Outputs:** 
-  - Response text (STRING)
-
-- **Category:** `advanced/loaders`
-
-### ConcatenateText (`concatenate.py`)
-
-- **Inputs:**
-  - `instruction`: Instructional text (STRING, multiline)
-  - `prompt`: Prompt text (STRING, multiline)
-  - `separator`: Separator string (STRING)
-
-- **Outputs:** 
-  - Concatenated text (STRING)
-
-- **Category:** `text`
 
 ## Donation
 
