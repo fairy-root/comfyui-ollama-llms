@@ -31,7 +31,7 @@ This repository, maintained by [fairy-root](https://github.com/fairy-root), prov
 - Goto `ComfyUI/custom_nodes` dir in **terminal(cmd)**
 - Clone the repository
    ```bash
-   git clone https://github.com/fairy-root/comfyui-ollama.git
+   git clone https://github.com/fairy-root/comfyui-ollama-llms.git
    ```
 - Restart ComfyUI
 
