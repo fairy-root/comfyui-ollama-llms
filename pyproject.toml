@@ -1,0 +1,14 @@
+[project]
+name = "comfyui-ollama-llms"
+description = "The PonySwitch node is a custom node for ComfyUI that modifies prompts based on a toggle switch and adds configurable pony tags."
+version = "1.0.0"
+license = {file = "LICENSE"}
+
+[project.urls]
+Repository = "https://github.com/fairy-root/comfyui-ollama-llms"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "comfyui-ollama-llms"
+Icon = ""
