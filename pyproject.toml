@@ -9,6 +9,6 @@ Repository = "https://github.com/fairy-root/comfyui-ollama-llms"
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
-PublisherId = ""
+PublisherId = "fairy-root"
 DisplayName = "comfyui-ollama-llms"
 Icon = ""
