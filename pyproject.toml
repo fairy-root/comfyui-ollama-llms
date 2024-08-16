@@ -1,6 +1,6 @@
 [project]
 name = "comfyui-ollama-llms"
-description = "The PonySwitch node is a custom node for ComfyUI that modifies prompts based on a toggle switch and adds configurable pony tags."
+description = "Ollama and Llava vision integration for ComfyUI"
 version = "1.0.0"
 license = {file = "LICENSE"}
 
