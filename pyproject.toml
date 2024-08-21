@@ -1,7 +1,7 @@
 [project]
 name = "comfyui-ollama-llms"
 description = "Ollama and Llava vision integration for ComfyUI"
-version = "1.0.0"
+version = "1.0.1"
 license = {file = "LICENSE"}
 
 [project.urls]
