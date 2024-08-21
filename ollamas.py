@@ -22,6 +22,7 @@ class OllamaService:
         # Load available models and API keys
         ollama_models = ollama.list()["models"]
         ollama_model_names = [model['name'] for model in ollama_models]
+        ollama_model_names = [item for item in ollama_model_names if "llava" not in item.lower()]
 
         return {
             "required": {
