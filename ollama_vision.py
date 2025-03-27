@@ -46,7 +46,7 @@ class LlavaVision:
 
         return {
             "required": {
-                "prompt": ("STRING", {"default": "Describe this image."}),
+                "prompt": ("STRING", {"multiline": True, "default": "Describe this image."}),
                 "images": ("IMAGE",),
             },
             "optional": {

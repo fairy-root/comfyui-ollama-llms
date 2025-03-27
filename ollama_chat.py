@@ -38,7 +38,7 @@ class OllamaService:
 
         return {
             "required": {
-                "prompt": ("STRING", {"default": "Enter your prompt here..."}),
+                "prompt": ("STRING", {"multiline": True, "default": "Enter your prompt here..."}),
             },
             "optional": {
                 "ollama_model": (
