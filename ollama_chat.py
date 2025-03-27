@@ -23,13 +23,18 @@ class OllamaService:
     @classmethod
     def INPUT_TYPES(cls):
         # Load available models and API keys
-        ollama_models = ollama.list()["models"]
-        ollama_model_names = [model.model for model in ollama_models]
-        if not ollama_model_names:
-            ollama_model_names = ["Unnamed Model"]
-        ollama_model_names = [
-            item for item in ollama_model_names if "llava" not in item.lower()
-        ]
+        ollama_model_names = ["Unnamed Model"]
+        try:
+            ollama_models = ollama.list()["models"]
+            ollama_model_names = [model.model for model in ollama_models]
+            if not ollama_model_names:
+                ollama_model_names = ["Unnamed Model"]
+            ollama_model_names = [
+                item for item in ollama_model_names if "llava" not in item.lower()
+            ]
+        except Exception as e:
+            print(f"Warning: Could not connect to Ollama server to fetch models. Please ensure Ollama is running. Error: {e}")
+            ollama_model_names = ["No Ollama Models Found"]
 
         return {
             "required": {

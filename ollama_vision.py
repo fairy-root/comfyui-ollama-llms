@@ -27,17 +27,22 @@ class LlavaVision:
     @classmethod
     def INPUT_TYPES(cls):
         # Load available models and API keys
-        ollama_models = ollama.list()["models"]
-        ollama_model_names = [
-            model.model
-            for model in ollama_models
-            if "llava" in model.model.lower()
-            or "vision" in model.model.lower()
-            or "vlm" in model.model.lower()
-            or model.model.lower().endswith("-v")
-        ]
-        if not ollama_model_names:
-            ollama_model_names = ["Unnamed Model"]
+        ollama_model_names = ["Unnamed Model"]
+        try:
+            ollama_models = ollama.list()["models"]
+            ollama_model_names = [
+                model.model
+                for model in ollama_models
+                if "llava" in model.model.lower()
+                or "vision" in model.model.lower()
+                or "vlm" in model.model.lower()
+                or model.model.lower().endswith("-v")
+            ]
+            if not ollama_model_names:
+                ollama_model_names = ["Unnamed Model"]
+        except Exception as e:
+            print(f"Warning: Could not connect to Ollama server to fetch models. Please ensure Ollama is running. Error: {e}")
+            ollama_model_names = ["No Ollama Vision Models Found"]
 
         return {
             "required": {
